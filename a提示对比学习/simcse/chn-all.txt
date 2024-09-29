@@ -1,0 +1,12 @@
+seed = 145, shot = 1, acc = 0.8191666666666667
+seed = 144, shot = 8, acc = 0.8566666666666667
+seed = 145, shot = 4, acc = 0.8458333333333333
+seed = 145, shot = 16, acc = 0.8525
+seed = 2, shot = 8, acc = 0.8733333333333333
+seed = 144, shot = 4, acc = 0.8291666666666667
+seed = 2, shot = 16, acc = 0.8666666666666667
+seed = 145, shot = 8, acc = 0.855
+seed = 2, shot = 1, acc = 0.8466666666666667
+seed = 144, shot = 16, acc = 0.8716666666666667
+seed = 144, shot = 1, acc = 0.7333333333333333
+seed = 2, shot = 4, acc = 0.765

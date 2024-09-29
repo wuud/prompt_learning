@@ -1,0 +1,83 @@
+count_words = {}
+core_embs = model.encode(core_words)
+for d in D:
+    words = seg_word(d)
+	for word in words:
+		count_words[word] = count_words.get(word,0) + 1
+word_embs = []
+for item in counts.items():
+	word = item[0]
+	word_freq = item[1]
+	if word_freq <= FREQ:
+		continue
+	word_emb = model.encode(word)
+	score = cos_sim(word_emb,core_embs)
+	if score < SCORE:
+		continue
+	word_embs.append(word_emb)
+label_words = []
+for core_emb in core_embs:
+	search_result_embs = semantic_search(core_emb,word_embs,TOP_K)
+	search_result_words = model.decode(search_result_embs)
+	label_words.extend(search_result_words)
+return label_words
+
+1:	count_words = {}
+2:	core_embs = model.encode(core_words)
+3:	for d in D:
+4:		words = seg_word(d)
+5:		for word in words:
+6:			count_words[word] = count_words.get(word,0) + 1
+7:	word_embs = []
+8:	for item in counts.items():
+9:		word = item[0]
+10:		word_freq = item[1]
+11:		if word_freq <= FREQ:
+12:			continue
+13:		word_emb = model.encode(word)
+14:		score = cos_sim(word_emb,core_embs)
+15:		if score < SCORE:
+16:			continue
+17:		word_embs.append(word_emb)
+18:	label_words = []
+19:	for core_emb in core_embs:
+20:		search_result_embs = semantic_search(core_emb,word_embs,TOP_K)
+21:		search_result_words = model.decode(search_result_embs)
+22:		label_words.extend(search_result_words)
+23:	return label_words
+
+good = model.encode('好')
+bad = model.encode('坏')
+count_words = {}
+positive = {}
+negative = {}
+core_embs = model.encode(core_words)
+for d in D:
+    for word, type in pseg.cut(sentence)
+        if flag != 'a':  # 过滤掉非形容词
+            continue
+        count_words[word] = count_words.get(word,0) + 1
+word_embs = []
+for item in counts.items():
+    word = item[0]
+    word_freq = item[1]
+	if word_freq <= FREQ:
+	    continue
+	word_emb = model.encode(word)
+	score1 = cos_sim(word_emb,good)
+	score2 = cos_sim(word_emb,bad)
+	if (score1 < Score and score2 < Score) or abs(score1 - score2) < Diff:
+	    continue
+	if score1 > score2:
+	    positive[word] = positive.get(word, 0) + 1
+	else:
+	    negative[word] = negative.get(word, 0) + 1
+
+positive = sorted(positive.items(), key=lambda x: x[1], reverse=True)
+negative = sorted(negative.items(), key=lambda x: x[1], reverse=True)
+
+pos_result_words = [item[0] for item in positive][:K]
+neg_result_words = [item[0] for item in negative][:K]
+
+return pos_result_words, neg_result_words
+

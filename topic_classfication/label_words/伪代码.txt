@@ -1,0 +1,30 @@
+
+数据集D={d1,d2,d3...,dn},类别集合classes = [ '文化', '娱乐', '体育',...], 核心词集合 core_words = [['文化', '文明', '诗词', '书法', '书画'], ["娱乐", '音乐', '影视', '综艺', '明星'],
+                  ["体育", '运动', '篮球', '足球', '排球'], ...], TOP_K, FREQ, SCORE
+
+# 对于文本分类中的每个类别都执行如下操作
+count_words = {}
+core_embeddings = model.encode(core_words)
+for d in D:
+    words = seg_word(d)
+    for word in words:
+        count_words[word] = count_words.get(word, 0) + 1  # 统计每一个词出现的次数
+
+word_embeddings = []
+for item in counts.items():
+    word = item[0]
+    word_freq = item[1]
+    if word_freq <= FREQ: # 过滤词频小的词语
+        continue
+    word_embedding = model.encode(word)
+    score = cos_sim(word_embedding, core_embeddings)
+    if score < SCORE:     # 过滤语义相似度小的词语
+        continue
+    word_embeddings.append(word_embedding)
+
+
+for core_embedding in core_embeddings:
+    res = semantic_search(core_embedding, word_embeddings, TOP_K) # 使用核心词进行语义搜索，结果取top k个词嵌入
+    result_words = model.decode(res) # 根据词嵌入得到词语
+
+return result_words

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/FT/fine_tuning.py" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/FT/res.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/my_kpt_label_words.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/paper/FT/res.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sentiment_classification/ChnSenticorp-获取标签词.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sentiment_classification/data_cleaning.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sentiment_classification/label_words.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sentiment_classification/stop_words.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sentiment_classification/weibo_classfication.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/topic_classfication/cnews/verbalizer.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/topic_classfication/cnews/verbalizer_100.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/topic_classfication/csldcp-67/verbalizer.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/topic_classfication/csldcp-67/verbalizer_store.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/topic_classfication/iflytek-119/verbalizer.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/topic_classfication/label_words/res/csldcp.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/topic_classfication/tnews/verbalizer.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/topic_classfication/tnews/verbalizer_300.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/topic_classfication/tnews/verbalizer_store.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/topic_classfication/实验结果.py" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
